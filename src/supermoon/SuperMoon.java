@@ -38,11 +38,10 @@ public class SuperMoon {
 
         strName = bCard.getName();
         intAge = bCard.getAge();
-        System.out.println(" Printing card now for " + strName + " who is " + intAge + "old ...");
+        System.out.println("Printing card now for " + strName + " who is " + intAge + "old ...");
         bCard.printCard();
-                
-                
-
+        bCard.printEnvelope();
+        System.out.println(bCard.toString() + " ..... using override toString() method");
     }
     
 }
