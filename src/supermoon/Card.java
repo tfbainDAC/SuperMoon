@@ -5,7 +5,7 @@
  */
 package supermoon;
 
-public class Card {
+public abstract class Card { // class is now abstract due to abstract method being added
    protected String _category;
    protected String _design;
    protected String _messageCover;
@@ -60,12 +60,16 @@ public class Card {
 	{
 		return _name;
 	}
-	
-
-	
-	public void printEnvelope()
+        
+	abstract void printCard(); // all classes which extend card must implement this method        
+        
+	public void printEnvelope()  
 	{
 		System.out.println("Envelope for " + _name);
 	}
-	 
+	
+        @Override
+        public String toString() {   // overrides the standard toString() method
+            return String.format("Card for " + _name ); 
+        }  
 }
